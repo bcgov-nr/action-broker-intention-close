@@ -1,0 +1,30 @@
+name: NR Broker intention close action
+description: Closes an intention opened in a previous action
+branding:
+  icon: package
+  color: blue
+
+inputs:
+  intention_token:
+    description: The intention to close
+    required: true
+  broker_url:
+    default: https://nr-broker.apps.silver.devops.gov.bc.ca
+    description: The default broker URL
+
+outputs:
+  audit_url:
+    description: The audit url
+
+runs:
+  using: "composite"
+  steps:
+    - shell: bash
+      run: echo "${{ github.action_path }}" >> $GITHUB_PATH
+    - shell: bash
+      env:
+        BROKER_URL: ${{ inputs.broker_url }}
+        INTENTION_TOKEN: ${{ inputs.intention_token }}
+      run: intention-close.sh
+
+
