@@ -19,7 +19,7 @@ Please refer to the [NR Broker Repository](https://github.com/bcgov-nr/nr-broker
 
     # The broker url.
     # Default: 'https://nr-broker.apps.silver.devops.gov.bc.ca'
-    persist-credentials: ''
+    broker_url: ''
 ```
 <!-- end usage -->
 
