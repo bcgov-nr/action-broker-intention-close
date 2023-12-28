@@ -4,7 +4,7 @@ This action closes an intention, so further access to the broker is denied.
 
 If you encounter an error, ensure that the Broker URL is correct and that the intention was not automatically closed at the end of the time to live (ttl) period.
 
-# Broker Documention
+# Broker Documentation
 
 Please refer to the [NR Broker Repository](https://github.com/bcgov-nr/nr-broker) for full usage details.
 
