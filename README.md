@@ -1,4 +1,4 @@
-# Broker Intention Close V1
+# Broker Intention Close V2
 
 This action closes an intention, so further access to the broker is denied.
 
@@ -12,7 +12,7 @@ Please refer to the [NR Broker Repository](https://github.com/bcgov-nr/nr-broker
 
 <!-- start usage -->
 ```yaml
-- uses: bcgov-nr/action-broker-intention-close@v1
+- uses: bcgov-nr/action-broker-intention-close@v2
   with:
     # The intention to close.
     intention_token: ''
