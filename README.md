@@ -1,4 +1,4 @@
-# Broker Intention Close V2
+# Broker Intention Close V3
 
 This action closes an intention, so further access to the broker is denied.
 
@@ -12,7 +12,7 @@ Please refer to the [NR Broker Repository](https://github.com/bcgov-nr/nr-broker
 
 <!-- start usage -->
 ```yaml
-- uses: bcgov-nr/action-broker-intention-close@v2
+- uses: bcgov-nr/action-broker-intention-close@v3
   with:
     # The intention to close.
     intention_token: ''
@@ -20,6 +20,14 @@ Please refer to the [NR Broker Repository](https://github.com/bcgov-nr/nr-broker
     # The broker url.
     # Default: 'https://broker.io.nrs.gov.bc.ca'
     broker_url: ''
+
+    # The outcome of the intention. Must be 'success', 'failure' or 'unknown'
+    # Default: 'success'
+    outcome: 'success'
+
+    # The reason for the intention close.
+    # Default: ''
+    reason: ''
 ```
 <!-- end usage -->
 

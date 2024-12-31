@@ -11,6 +11,12 @@ inputs:
   broker_url:
     default: https://broker.io.nrs.gov.bc.ca
     description: The broker url.
+  outcome:
+    default: success
+    description: The outcome of the intention. Must be 'success', 'failure' or 'unknown'
+  reason:
+    default:
+    description: The reason for the intention close.
 
 outputs:
   audit_url:
@@ -27,6 +33,8 @@ runs:
       env:
         BROKER_URL: ${{ inputs.broker_url }}
         INTENTION_TOKEN: ${{ inputs.intention_token }}
+        OUTCOME: ${{ inputs.outcome }}
+        REASON: ${{ inputs.reason }}
       run: intention-close.sh
 
 
